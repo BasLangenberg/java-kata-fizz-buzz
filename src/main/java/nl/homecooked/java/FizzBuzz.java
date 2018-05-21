@@ -31,7 +31,7 @@ public class FizzBuzz
         return returnString;
     }
 
-    public Boolean getFizz() {
+    private Boolean getFizz() {
         if (this.number % 3 == 0){
             return true;
         }
@@ -39,7 +39,7 @@ public class FizzBuzz
         return false;
     }
 
-    public Boolean getBuzz() {
+    private Boolean getBuzz() {
         if (this.number % 5 == 0){
             return true;
         }
