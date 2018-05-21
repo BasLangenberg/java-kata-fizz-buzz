@@ -9,19 +9,13 @@ public class FizzBuzz
 
     public FizzBuzz(int input){
         this.number = input;
+        this.returnString = "";
 
-        if (this.number % 3 == 0){
-            this.fizz = true;
-        }
-
-        if (this.number % 5 == 0) {
-            this.buzz = true;
-        }
+        this.fizz = getFizz();
+        this.buzz = getBuzz();
     }
 
     public String getResult() {
-        emptyReturnString();
-
         if (fizz) {
             this.returnString += "Fizz";
         }
@@ -37,12 +31,20 @@ public class FizzBuzz
         return returnString;
     }
 
-    private void emptyReturnString() {
-        this.returnString = "";
+    public Boolean getFizz() {
+        if (this.number % 3 == 0){
+            return true;
+        }
+
+        return false;
     }
 
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    public Boolean getBuzz() {
+        if (this.number % 5 == 0){
+            return true;
+        }
+
+        return false;
     }
+
 }
